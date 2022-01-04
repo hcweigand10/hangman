@@ -6,6 +6,8 @@ var reset = document.querySelector("#reset");
 var timer = document.querySelector("#timer");
 var winLoss = document.querySelector("#win-loss");
 var alert = document.querySelector("#alert");
+var alert2 = document.querySelector("#alert2");
+var alert3 = document.querySelector("#alert3");
 
 var wins;;
 var losses;
@@ -97,7 +99,15 @@ function getScores() {
 function endGame() {
     if (keyword.length === wordArray.length && keyword.every(function(value, index) { return value === wordArray[index]})) {
         winLoss.textContent = "You win!";
-        alert.textContent = "Miss you babe... and your dumptruck :)"
+        setTimeout(() => {
+            alert.textContent = "Why did the worker get fired from the calendar factory?"
+        }, 3000); 
+        setTimeout(() => {
+            alert2.textContent = "They asked to take a day off!"
+          }, 6000);        
+          setTimeout(() => {
+            alert3.textContent = "Miss you babe... and your dumptruck :)"
+          }, 9000);
         wins++;
         localStorage.setItem("wins", JSON.stringify(wins));
     } else {
