@@ -33,7 +33,7 @@ function newGame() {
         keyword[i] = "_";
     }
     display.textContent = keyword.join(" ");
-    setTime(600);
+    // setTime(600);
     winLoss.textContent = "";
 }
 
